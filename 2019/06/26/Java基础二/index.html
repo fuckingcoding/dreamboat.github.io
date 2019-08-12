@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/06/26/Java基础二/capacity.png">
 <meta property="og:image" content="http://yoursite.com/2019/06/26/Java基础二/capacity1.png">
-<meta property="og:updated_time" content="2019-08-01T05:55:56.930Z">
+<meta property="og:updated_time" content="2019-08-12T06:45:51.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java复习（二）--Java基本程序设计结构">
 <meta name="twitter:description" content="参考资料：Java核心技术 卷一  基本的Java设计结构12345678// 公共的   类    类名	public class FirstJava	&amp;#123;//公共的   静态的 无返回值 main方法  数组			public static void main (String[] args)		&amp;#123;	//输出语句			System.out.printIn(&amp;quot;Hell">
@@ -537,6 +537,7 @@
 <p><img src="/2019/06/26/Java基础二/capacity.png" alt="capacity1"><br>可以看出，当为缺省构造时，且不超过16时，默认容量为16，超过时在原有的基础上*2+2;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder builder2=new StringBuilder(10);</span><br><span class="line">builder2.append(&quot;capacity&quot;);</span><br><span class="line">LogUtils.e(&quot;capacity的长度&quot;+builder2.length());     </span><br><span class="line">LogUtils.e(&quot;capacity的容量&quot;+builder2.capacity());</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/06/26/Java基础二/capacity1.png" alt="capacity1"><br>当为有参构造时，不使用默认长度容量，自定义初始容量。超过16时与缺省构造相同</p>
+<p><a href="https://fuckingcoding.github.io/2019/08/01/%E8%87%AA%E5%AE%9A%E4%B9%89StringBuilder%E5%92%8CStringBuffer/#more" target="_blank" rel="noopener">自定义StringBuilder和StringBuffer</a></p>
 
       
     </div>
