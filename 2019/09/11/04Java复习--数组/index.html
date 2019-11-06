@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java基础,">
+  <meta name="keywords" content="Java,Java基础,">
 
 
 
@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="根据上篇得出的规律  初始默认长度16或自定义 扩增规律：原有容量*2+2  StingBuilder和StringBuffer都继承与AbstractStringBuilder，且AbstractStringBuilder不可由外部调用。所以首先写一个MyAbstractStringBuilder类">
-<meta name="keywords" content="Java基础">
+<meta name="description" content="今天最好的表现是明天最低的要求   参考资料：Java核心技术 卷一  数组基本概念数组是一种数据结构，用来存储同一类型的集合。通过下标，可以访问数组中的每一个值。 为什么要使用数组1，单一值类型变量有时难以满足应用程序的设计要求比如你要定义100个整型变量，那么如果不使用数组，可能需要： 1int i1,i2,i3....i100; 如果要输出这100个变量，那。。 2，可以自动给数组中的元素从">
+<meta name="keywords" content="Java,Java基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自定义StringBuilder和StringBuffer">
-<meta property="og:url" content="http://yoursite.com/2019/08/01/自定义StringBuilder和StringBuffer/index.html">
+<meta property="og:title" content="04Java复习--数组">
+<meta property="og:url" content="http://yoursite.com/2019/09/11/04Java复习--数组/index.html">
 <meta property="og:site_name" content="DreamBoat的博客">
-<meta property="og:description" content="根据上篇得出的规律  初始默认长度16或自定义 扩增规律：原有容量*2+2  StingBuilder和StringBuffer都继承与AbstractStringBuilder，且AbstractStringBuilder不可由外部调用。所以首先写一个MyAbstractStringBuilder类">
+<meta property="og:description" content="今天最好的表现是明天最低的要求   参考资料：Java核心技术 卷一  数组基本概念数组是一种数据结构，用来存储同一类型的集合。通过下标，可以访问数组中的每一个值。 为什么要使用数组1，单一值类型变量有时难以满足应用程序的设计要求比如你要定义100个整型变量，那么如果不使用数组，可能需要： 1int i1,i2,i3....i100; 如果要输出这100个变量，那。。 2，可以自动给数组中的元素从">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/自定义StringBuilder和StringBuffer/img1.png">
-<meta property="og:updated_time" content="2019-08-01T06:48:32.016Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/11/04Java复习--数组/java04-01.png">
+<meta property="og:updated_time" content="2019-11-06T09:42:07.572Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义StringBuilder和StringBuffer">
-<meta name="twitter:description" content="根据上篇得出的规律  初始默认长度16或自定义 扩增规律：原有容量*2+2  StingBuilder和StringBuffer都继承与AbstractStringBuilder，且AbstractStringBuilder不可由外部调用。所以首先写一个MyAbstractStringBuilder类">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/01/自定义StringBuilder和StringBuffer/img1.png">
+<meta name="twitter:title" content="04Java复习--数组">
+<meta name="twitter:description" content="今天最好的表现是明天最低的要求   参考资料：Java核心技术 卷一  数组基本概念数组是一种数据结构，用来存储同一类型的集合。通过下标，可以访问数组中的每一个值。 为什么要使用数组1，单一值类型变量有时难以满足应用程序的设计要求比如你要定义100个整型变量，那么如果不使用数组，可能需要： 1int i1,i2,i3....i100; 如果要输出这100个变量，那。。 2，可以自动给数组中的元素从">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/11/04Java复习--数组/java04-01.png">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/01/自定义StringBuilder和StringBuffer/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/11/04Java复习--数组/">
 
 
 
 
 
-  <title>自定义StringBuilder和StringBuffer | DreamBoat的博客</title>
+  <title>04Java复习--数组 | DreamBoat的博客</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/自定义StringBuilder和StringBuffer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/11/04Java复习--数组/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DreamBoat">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">自定义StringBuilder和StringBuffer</h1>
+          <h1 class="post-title" itemprop="name headline">04Java复习--数组</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-01T14:30:24+08:00">
-                2019-08-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-11T14:08:17+08:00">
+                2019-09-11
               </time>
             
 
@@ -339,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -376,21 +376,44 @@
       
 
       
-        <p>根据上篇得出的规律</p>
-<ul>
-<li>初始默认长度16或自定义</li>
-<li>扩增规律：原有容量*2+2</li>
+        <p><strong>今天最好的表现是明天最低的要求</strong></p>
+<hr>
+<blockquote>
+<p>参考资料：<br>Java核心技术 卷一</p>
+</blockquote>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>数组是一种数据结构，用来存储同一类型的集合。通过下标，可以访问数组中的每一个值。</p>
+<h2 id="为什么要使用数组"><a href="#为什么要使用数组" class="headerlink" title="为什么要使用数组"></a>为什么要使用数组</h2><p>1，单一值类型变量有时难以满足应用程序的设计要求<br>比如你要定义100个整型变量，那么如果不使用数组，可能需要：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int i1,i2,i3....i100;</span><br></pre></td></tr></table></figure>
+<p>如果要输出这100个变量，那。。</p>
+<p>2，可以自动给数组中的元素从0开始编号，方便操作这些元素<br><a id="more"></a></p>
+<h2 id="数组的初始化"><a href="#数组的初始化" class="headerlink" title="数组的初始化"></a>数组的初始化</h2><ul>
+<li>动态初始化<ul>
+<li>声明并开辟数组<ul>
+<li>数据类型[] 数组名称 = new 数据类型[长度] （常用）</li>
+<li>数据类型 数组名称[] = new 数据类型[长度]</li>
 </ul>
-<p>StingBuilder和StringBuffer都继承与AbstractStringBuilder，且AbstractStringBuilder不可由外部调用。所以首先写一个MyAbstractStringBuilder类</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">public class MyAbsractStringBuilder &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 存储字符的数组</span><br><span class="line">     */</span><br><span class="line">    char[] value;</span><br><span class="line">    /**</span><br><span class="line">     * 记录append操作，添加字符的数量</span><br><span class="line">     */</span><br><span class="line">    int count;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 无参构造</span><br><span class="line">     */</span><br><span class="line">    MyAbsractStringBuilder() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @param capacity 为char 数组定义大小</span><br><span class="line">     */</span><br><span class="line">    MyAbsractStringBuilder(int capacity) &#123;</span><br><span class="line">        value = new char[capacity];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public MyAbsractStringBuilder append(String str) &#123;</span><br><span class="line">        if (str == null) &#123;</span><br><span class="line">            value = new char[0];</span><br><span class="line">            return this;</span><br><span class="line">        &#125;</span><br><span class="line">        int len = str.length();//获取新添加字符的长度</span><br><span class="line">        ensureCapacityInternal(count + len);//已知新字符的长度，若超出原数组长度，在原有的基础上创建（扩充）一个新的容器（数组）</span><br><span class="line">        str.getChars(0, len, value, count);//使用string的getchars方法将字符从该字符串复制到value数组中</span><br><span class="line">        count += len;//count 长度</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void ensureCapacityInternal(int needCapacity) &#123;</span><br><span class="line">        if (needCapacity &gt; value.length) &#123;//现有数组容量不满足</span><br><span class="line">            value = Arrays.copyOf(value, newCapacity(needCapacity));//创建新的数组  参数2：新的数组的长度</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private int newCapacity(int needCapacity) &#123;</span><br><span class="line">        int newCapacity = (value.length * 2) + 2;//定义新的容量，原有容量*2+2</span><br><span class="line">        if (newCapacity &lt; needCapacity) &#123;  //如果新容量小于所需容量，新容量=所需容量</span><br><span class="line">            newCapacity = needCapacity;</span><br><span class="line">        &#125;</span><br><span class="line">        // 数组分配最大大小，超过最大限制可能会导致OutOfMemoryError</span><br><span class="line">        return newCapacity &gt; Integer.MAX_VALUE - 8 ? newCapacity : Integer.MAX_VALUE - 8;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @return 长度</span><br><span class="line">     */</span><br><span class="line">    public int length() &#123;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @return 容量</span><br><span class="line">     */</span><br><span class="line">    public int capacity() &#123;</span><br><span class="line">        return value.length;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @return 字符串</span><br><span class="line">     */</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return new String(value, 0, count);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>定义MyStringBuilder类继承MyAbsractStringBuilder</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public class MyStringBuilder extends MyAbsractStringBuilder &#123;</span><br><span class="line">    MyStringBuilder() &#123;</span><br><span class="line">        super(16);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    MyStringBuilder(int capacity) &#123;</span><br><span class="line">        super(capacity);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public MyAbsractStringBuilder append(String str) &#123;</span><br><span class="line">        return super.append(str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int length() &#123;</span><br><span class="line">        return super.length();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int capacity() &#123;</span><br><span class="line">        return super.capacity();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return super.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>主函数调用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MyStringBuilder myStringBuilder=new MyStringBuilder();</span><br><span class="line">    myStringBuilder.append(&quot;myStringBuilder&quot;);</span><br><span class="line">    LogUtils.e(&quot;myStringBuilder的长度&quot;+myStringBuilder.length());</span><br><span class="line">    LogUtils.e(&quot;myStringBuilder的容量&quot;+myStringBuilder.capacity());</span><br><span class="line">    LogUtils.e(&quot;---&quot;+myStringBuilder.toString());</span><br></pre></td></tr></table></figure>
-<p>log打印<br><img src="/2019/08/01/自定义StringBuilder和StringBuffer/img1.png" alt="MyStringBuilder"></p>
-<p>StringBuffer与StringBuilder 不同的是，方法需要加同步锁</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public class MyStringBuffer extends MyAbsractStringBuilder&#123;</span><br><span class="line"></span><br><span class="line">    MyStringBuffer() &#123;</span><br><span class="line">        super(16);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    MyStringBuffer(int capacity) &#123;</span><br><span class="line">        super(capacity);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public synchronized  MyAbsractStringBuilder append(String str) &#123;</span><br><span class="line">        return super.append(str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public synchronized int length() &#123;</span><br><span class="line">        return super.length();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public synchronized int capacity() &#123;</span><br><span class="line">        return super.capacity();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public synchronized String toString() &#123;</span><br><span class="line">        return super.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>分步声明开辟数组<ul>
+<li>数据类型[] 数组名称=null</li>
+<li>数据名称 = new 数据类型[长度]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //动态声明开辟</span><br><span class="line">        int[] a = new int[2];</span><br><span class="line">        a[0] = 1;</span><br><span class="line">        a[1] = 2;</span><br><span class="line">        for (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            System.out.println(a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        int b[] = new int[2];</span><br><span class="line">        b[0] = 3;</span><br><span class="line">        b[1] = 4;</span><br><span class="line">        for (int x : b) &#123;</span><br><span class="line">            System.out.println(x);</span><br><span class="line">        &#125;</span><br><span class="line">        //动态声明开辟-分步</span><br><span class="line">        int[] c = null;</span><br><span class="line">        c = new int[2];</span><br><span class="line">        c[0] = 5;</span><br><span class="line">        c[1] = 6;</span><br><span class="line">        System.out.println(Arrays.toString(c));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>静态初始化<ul>
+<li>数据类型 数组名称 =new 数据类型{值1，值2}</li>
+<li>数据类型 数组名称={值1，值2}</li>
+</ul>
+</li>
+</ul>
+<p>不论怎么初始化，一定是声明+开辟空间，因为数组属于引用类型。不开辟空间的话，无法在堆内存中找到，会出现<strong>NullPointerException</strong>异常</p>
+<h2 id="数组的排序和最值"><a href="#数组的排序和最值" class="headerlink" title="数组的排序和最值"></a>数组的排序和最值</h2><h3 id="获取最值"><a href="#获取最值" class="headerlink" title="获取最值"></a>获取最值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //获取最大值最小值</span><br><span class="line">        int[] a = &#123;22, 55, 34, 78, 203, 3, 5&#125;;</span><br><span class="line">        //声明最大最小值</span><br><span class="line">        int max = a[0];</span><br><span class="line">        int min = a[0];</span><br><span class="line">        //比较记录</span><br><span class="line">        for (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            if (a[i] &gt; max) &#123;</span><br><span class="line">                max = a[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            if (a[i] &lt; min) &#123;</span><br><span class="line">                min = a[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(&quot;最大值=&quot; + max);</span><br><span class="line">        System.out.println(&quot;最小值=&quot; + min);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Arrays-sort-）"><a href="#Arrays-sort-）" class="headerlink" title="Arrays.sort(）"></a>Arrays.sort(）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Integer[] a = &#123;22, 55, 34, 78, 203, 3, 5&#125;;</span><br><span class="line">        //优化的快速排序方法（串行排序）Build completed successfully in 2 s 722 ms</span><br><span class="line">        Arrays.sort(a);</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">        //优化的快速排序方法（并行排序）性能和串行比较高 Build completed successfully in 2 s 666 ms</span><br><span class="line">        Arrays.parallelSort(a);</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">        //从大大小排序  Build completed successfully in 2 s 777 ms</span><br><span class="line">        Comparator comparator = new MyComparator();</span><br><span class="line">        Arrays.sort(a, comparator);</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static class MyComparator implements Comparator&lt;Integer&gt; &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public int compare(Integer o1, Integer o2) &#123;</span><br><span class="line">            if (o1 &lt; o2) &#123;</span><br><span class="line">                return 1;</span><br><span class="line">            &#125; else if (o1 &gt; o2) &#123;</span><br><span class="line">                return -1;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：<br><img src="/2019/09/11/04Java复习--数组/java04-01.png" alt="图片上传错误"></p>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3>
       
     </div>
     
@@ -407,6 +430,8 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
             <a href="/tags/Java基础/" rel="tag"># Java基础</a>
           
         </div>
@@ -420,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/26/02Java复习--Java基本程序设计结构/" rel="next" title="02Java复习--Java基本程序设计结构">
-                <i class="fa fa-chevron-left"></i> 02Java复习--Java基本程序设计结构
+              <a href="/2019/08/12/03Java复习--控制流程/" rel="next" title="03Java复习--控制流程">
+                <i class="fa fa-chevron-left"></i> 03Java复习--控制流程
               </a>
             
           </div>
@@ -429,10 +454,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/12/03Java复习--控制流程/" rel="prev" title="03Java复习--控制流程">
-                03Java复习--控制流程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -484,8 +505,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -547,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要使用数组"><span class="nav-number">1.2.</span> <span class="nav-text">为什么要使用数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的初始化"><span class="nav-number">1.3.</span> <span class="nav-text">数组的初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的排序和最值"><span class="nav-number">1.4.</span> <span class="nav-text">数组的排序和最值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取最值"><span class="nav-number">1.4.1.</span> <span class="nav-text">获取最值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-sort-）"><span class="nav-number">1.4.2.</span> <span class="nav-text">Arrays.sort(）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">1.4.3.</span> <span class="nav-text">排序</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

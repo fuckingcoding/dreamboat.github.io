@@ -92,9 +92,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/12/03Java复习--控制流程/java3_03.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/12/03Java复习--控制流程/java3_04.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/12/03Java复习--控制流程/java3_05.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/12/03Java复习--控制流程/java3_08.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/12/03Java复习--控制流程/java3_06.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/12/03Java复习--控制流程/java3_07.png">
-<meta property="og:updated_time" content="2019-09-10T12:04:39.787Z">
+<meta property="og:updated_time" content="2019-09-11T06:29:41.562Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="03Java复习--控制流程">
 <meta name="twitter:description" content="参考资料：Java核心技术 卷一  与任何程序设计语言一样，Java使用条件语句和循环结构来确定控制流程 块作用域块是指由一对大括号括起来的若干条简单的Java语句,块确定了变量的作用域，不可在嵌套的俩个块中声明同名的变量 1234567public static void  mian(String[] str) &amp;#123;     int n;     &amp;#123;         int">
@@ -393,29 +394,41 @@
 <p>if,如果 if(条件){},执行语句一条时，中括号可省略</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">	  int a=6;</span><br><span class="line">	  if(a&gt;5)&#123;</span><br><span class="line">          System.out.println(&quot;我比5大&quot;);</span><br><span class="line">      &#125;else &#123;</span><br><span class="line">          System.out.println(&quot;我比5小&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：<br><img src="/2019/08/12/03Java复习--控制流程/java3_01.png" alt="java3_01"></p>
+<p>输出结果：<br><img src="/2019/08/12/03Java复习--控制流程/java3_01.png" alt="图片上传错误"></p>
 <h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h2 id="while"><a href="#while" class="headerlink" title="while"></a>while</h2><blockquote>
 <p>while(条件){输出}</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">	  int a=1;</span><br><span class="line">	  while (a&lt;10)&#123;</span><br><span class="line">	      a++;</span><br><span class="line">          System.out.println(a);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>while，一直循环，直到变量a自增到大于10<br><img src="/2019/08/12/03Java复习--控制流程/java3_02.png" alt="java3_02"><br>while 语句会首先检测条件，当条件不满足时，代码不会被执行。<br>所以如果需要至少执行一次代码的话，应该把条件放到最后。使用do while </p>
+<p>while，一直循环，直到变量a自增到大于10<br><img src="/2019/08/12/03Java复习--控制流程/java3_02.png" alt="图片上传错误"><br>while 语句会首先检测条件，当条件不满足时，代码不会被执行。<br>所以如果需要至少执行一次代码的话，应该把条件放到最后。使用do while </p>
 <h2 id="do-while"><a href="#do-while" class="headerlink" title="do while"></a>do while</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">	  int a=1;</span><br><span class="line">	  do&#123;</span><br><span class="line">        System.out.println(a);</span><br><span class="line">        a++;</span><br><span class="line">      &#125;while (a&lt;5);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>先执行一次代码，在进行判断<br><img src="/2019/08/12/03Java复习--控制流程/java3_03.png" alt="java3_03"></p>
+<p>先执行一次代码，在进行判断<br><img src="/2019/08/12/03Java复习--控制流程/java3_03.png" alt="图片上传错误"></p>
 <h1 id="确定循环-for"><a href="#确定循环-for" class="headerlink" title="确定循环 for"></a>确定循环 for</h1><p>根据块的概念，循环有其单独的作用域（{}之内）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i &lt;10 ; i++) &#123;</span><br><span class="line">           //执行语句</span><br><span class="line">           //第一部分：计数器初始化  第二部分：条件  第三部分如何更新计数器</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
 <h2 id="循环嵌套"><a href="#循环嵌套" class="headerlink" title="循环嵌套"></a>循环嵌套</h2><p>嵌套循环及双层/多层循环进行嵌套</p>
 <p>打印一个正方形</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i &lt;10 ; i++) &#123;</span><br><span class="line">          for (int j = 0; j &lt; 10; j++) &#123;</span><br><span class="line">              System.out.print(&quot; *&quot;);</span><br><span class="line">          &#125;</span><br><span class="line">          System.out.println();//换行</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/08/12/03Java复习--控制流程/java3_04.png" alt="Java03_04"><br>打印一个直角三角形</p>
+<p><img src="/2019/08/12/03Java复习--控制流程/java3_04.png" alt="图片上传错误"><br>打印一个直角三角形</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 1; i &lt;10 ; i++) &#123;</span><br><span class="line">           for (int j = 0; j &lt; i; j++) &#123;</span><br><span class="line">               System.out.print(&quot; *&quot;);</span><br><span class="line">           &#125;</span><br><span class="line">           System.out.println();//换行</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/08/12/03Java复习--控制流程/java3_05.png" alt="java3_01"></p>
+<p><img src="/2019/08/12/03Java复习--控制流程/java3_05.png" alt="图片上传错误"></p>
+<h3 id="for-each-循环（增强for循环）"><a href="#for-each-循环（增强for循环）" class="headerlink" title="for each 循环（增强for循环）"></a>for each 循环（增强for循环）</h3><p>结构：for(int k:a)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for(变量类型 变量名：数组名)&#123; 执行语句&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>for循环是通过循环控制变量，访问数组中不同位置处的元素进行遍历</li>
+<li>for-each循环是依次处理数组中的元素，不必为指定下标值分心</li>
+</ul>
+<p>下面是一个使用for-each循环寻找数组内元素的例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        int [] a=new int [10];//新建长度为10的数组</span><br><span class="line">        for (int i = 0; i &lt; a.length; i++) &#123;//给数组赋值</span><br><span class="line">            a[i]=i;</span><br><span class="line">        &#125;</span><br><span class="line">        int b=5;</span><br><span class="line">        for(int c:a)&#123;</span><br><span class="line">            if(c==b)&#123;</span><br><span class="line">                System.out.println(&quot;找到了 c=&quot;+c);</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                System.out.println(&quot;没找到&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出：<br><img src="/2019/08/12/03Java复习--控制流程/java3_08.png" alt="图片上传错误"><br>如果只需找到数组中是否有某个元素，而不返回对应下标，使用for-each循环更加简洁，不易出错。</p>
+<blockquote>
+<p>如果只是单纯想打印数组中的元素,可以使用Arrays.toString();</p>
+</blockquote>
 <h1 id="多重选择-switch"><a href="#多重选择-switch" class="headerlink" title="多重选择 switch"></a>多重选择 switch</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">switch (表达式) &#123;</span><br><span class="line">        case 取值1:  </span><br><span class="line"> 		//char byte short或int的常量表达式</span><br><span class="line"> 		//枚举常量</span><br><span class="line"> 		//Java SE7 开始可用字符串</span><br><span class="line"></span><br><span class="line">            break;</span><br><span class="line">        //最终执行</span><br><span class="line">        default:</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 <h1 id="中断控制流程语句"><a href="#中断控制流程语句" class="headerlink" title="中断控制流程语句"></a>中断控制流程语句</h1><p>goto是拙劣的，Java虽未删除，但依旧没使用它。</p>
 <p>但跳出循环还是需要的，使用其他的代替</p>
 <h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        for (int i = 1; i &lt;10 ; i++) &#123;</span><br><span class="line">            System.out.print(i);</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果<br><img src="/2019/08/12/03Java复习--控制流程/java3_06.png" alt="java3_01"><br>当代码执行循环第一次时，break就执行了，不再进行之后的循环</p>
+<p>输出结果<br><img src="/2019/08/12/03Java复习--控制流程/java3_06.png" alt="图片上传错误"><br>当代码执行循环第一次时，break就执行了，不再进行之后的循环</p>
 <h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt;10 ; i++) &#123;</span><br><span class="line">           if(i%2==1)&#123;</span><br><span class="line">               continue;</span><br><span class="line">           &#125;</span><br><span class="line">           System.out.println(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果<br><img src="/2019/08/12/03Java复习--控制流程/java3_07.png" alt="java3_01"></p>
+<p>输出结果<br><img src="/2019/08/12/03Java复习--控制流程/java3_07.png" alt="图片上传错误"></p>
 <p>当i % 2 == 1时，程序正常循环，否则终止本次循环，直接开启下次循环</p>
 
       
@@ -458,6 +471,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/11/04Java复习--数组/" rel="prev" title="04Java复习--数组">
+                04Java复习--数组 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -536,7 +553,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -591,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#块作用域"><span class="nav-number">1.</span> <span class="nav-text">块作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件语句-if"><span class="nav-number">2.</span> <span class="nav-text">条件语句 if</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环"><span class="nav-number">3.</span> <span class="nav-text">循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#while"><span class="nav-number">3.1.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#do-while"><span class="nav-number">3.2.</span> <span class="nav-text">do while</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#确定循环-for"><span class="nav-number">4.</span> <span class="nav-text">确定循环 for</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#循环嵌套"><span class="nav-number">4.1.</span> <span class="nav-text">循环嵌套</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多重选择-switch"><span class="nav-number">5.</span> <span class="nav-text">多重选择 switch</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中断控制流程语句"><span class="nav-number">6.</span> <span class="nav-text">中断控制流程语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#break"><span class="nav-number">6.1.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continue"><span class="nav-number">6.2.</span> <span class="nav-text">continue</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#块作用域"><span class="nav-number">1.</span> <span class="nav-text">块作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件语句-if"><span class="nav-number">2.</span> <span class="nav-text">条件语句 if</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环"><span class="nav-number">3.</span> <span class="nav-text">循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#while"><span class="nav-number">3.1.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#do-while"><span class="nav-number">3.2.</span> <span class="nav-text">do while</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#确定循环-for"><span class="nav-number">4.</span> <span class="nav-text">确定循环 for</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#循环嵌套"><span class="nav-number">4.1.</span> <span class="nav-text">循环嵌套</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#for-each-循环（增强for循环）"><span class="nav-number">4.1.1.</span> <span class="nav-text">for each 循环（增强for循环）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多重选择-switch"><span class="nav-number">5.</span> <span class="nav-text">多重选择 switch</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中断控制流程语句"><span class="nav-number">6.</span> <span class="nav-text">中断控制流程语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#break"><span class="nav-number">6.1.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continue"><span class="nav-number">6.2.</span> <span class="nav-text">continue</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -636,7 +653,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.9k字</span>
+  <span class="post-count">博客全站共4.9k字</span>
 </div>
 
         
