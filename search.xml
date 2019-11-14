@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[05Java复习--类与对象]]></title>
     <url>%2F2019%2F11%2F14%2F05Java%E5%A4%8D%E4%B9%A0-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%2F</url>
-    <content type="text"><![CDATA[参考资料： Java核心技术 卷一]]></content>
+    <content type="text"><![CDATA[参考资料： Java核心技术 卷一 ##面向对象 概述 三大特性封装继承多态五大原则单一职责（SRP）开放封闭原则(OCP)里式替换原则(LSP)依赖倒置原则（DIP）接口分离原则（ISP）##对象 ##封装 ##重载]]></content>
       <categories>
         <category>Java</category>
       </categories>
