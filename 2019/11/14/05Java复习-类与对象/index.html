@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="参考资料：   Java核心技术 卷一  面向对象概述">
+<meta name="description" content="参考资料：   Java核心技术 卷一  面向对象概述 通过操作对象来达到用户需求   就说吃饭吧。饿了要吃东西，自己做饭的话，需要去买菜，洗菜，淘米，烹饪。这个是面向过程。面向对象的话，就是：媳妇，饿了，要吃排骨，你去做吧。媳妇，就是你对象（咦。。。）在Java里，我们就是操作一个个对象去完成各种需求的。">
 <meta name="keywords" content="Java,Java基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="05Java复习--类与对象">
 <meta property="og:url" content="http://yoursite.com/2019/11/14/05Java复习-类与对象/index.html">
 <meta property="og:site_name" content="DreamBoat的博客">
-<meta property="og:description" content="参考资料：   Java核心技术 卷一  面向对象概述">
+<meta property="og:description" content="参考资料：   Java核心技术 卷一  面向对象概述 通过操作对象来达到用户需求   就说吃饭吧。饿了要吃东西，自己做饭的话，需要去买菜，洗菜，淘米，烹饪。这个是面向过程。面向对象的话，就是：媳妇，饿了，要吃排骨，你去做吧。媳妇，就是你对象（咦。。。）在Java里，我们就是操作一个个对象去完成各种需求的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-14T12:53:21.927Z">
+<meta property="og:image" content="http://yoursite.com/2019/11/14/05Java复习-类与对象/05java_01.png">
+<meta property="og:updated_time" content="2019-11-18T06:58:09.260Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="05Java复习--类与对象">
-<meta name="twitter:description" content="参考资料：   Java核心技术 卷一  面向对象概述">
+<meta name="twitter:description" content="参考资料：   Java核心技术 卷一  面向对象概述 通过操作对象来达到用户需求   就说吃饭吧。饿了要吃东西，自己做饭的话，需要去买菜，洗菜，淘米，烹饪。这个是面向过程。面向对象的话，就是：媳妇，饿了，要吃排骨，你去做吧。媳妇，就是你对象（咦。。。）在Java里，我们就是操作一个个对象去完成各种需求的。">
+<meta name="twitter:image" content="http://yoursite.com/2019/11/14/05Java复习-类与对象/05java_01.png">
 
 
 
@@ -380,10 +382,57 @@
 <blockquote>
 <p>Java核心技术 卷一</p>
 </blockquote>
-<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><a id="more"></a>
-<h3 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h3><h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><h3 id="五大原则"><a href="#五大原则" class="headerlink" title="五大原则"></a>五大原则</h3><h4 id="单一职责（SRP）"><a href="#单一职责（SRP）" class="headerlink" title="单一职责（SRP）"></a>单一职责（SRP）</h4><h4 id="开放封闭原则-OCP"><a href="#开放封闭原则-OCP" class="headerlink" title="开放封闭原则(OCP)"></a>开放封闭原则(OCP)</h4><h4 id="里式替换原则-LSP"><a href="#里式替换原则-LSP" class="headerlink" title="里式替换原则(LSP)"></a>里式替换原则(LSP)</h4><h4 id="依赖倒置原则（DIP）"><a href="#依赖倒置原则（DIP）" class="headerlink" title="依赖倒置原则（DIP）"></a>依赖倒置原则（DIP）</h4><h4 id="接口分离原则（ISP）"><a href="#接口分离原则（ISP）" class="headerlink" title="接口分离原则（ISP）"></a>接口分离原则（ISP）</h4><p>##对象</p>
-<p>##封装</p>
-<p>##重载</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>通过操作对象来达到用户需求</p>
+</blockquote>
+<blockquote>
+<p>就说吃饭吧。饿了要吃东西，自己做饭的话，需要去买菜，洗菜，淘米，烹饪。这个是面向过程。面向对象的话，就是：媳妇，饿了，要吃排骨，你去做吧。媳妇，就是你对象（咦。。。）在Java里，我们就是操作一个个对象去完成各种需求的。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h3><h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><h5 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h5><p>封装就是隐藏对象的属性和实现细节，对外公开接口，控制在程序中属性的读和修改的访问级别。将抽象得到的数据和行为相结合，形成一个整体（类）</p>
+<p>这样，只能通过规定的方法来访问数据，隐藏了实现细节，提高了程序的安全性和可维护性</p>
+<h5 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class OOPTest1 &#123;</span><br><span class="line">    public String name; //公有的</span><br><span class="line">    protected String money; //受保护的</span><br><span class="line">    int height; //默认的</span><br><span class="line">    private int age; //私有的</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/11/14/05Java复习-类与对象/05java_01.png" alt="图片上传错误"><br>无法直接获取age</p>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><h5 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h5><p>继承就是子类继承父类的特征和行为，使得子类对象具有父类的实例域和方法，或类从父类继承方法，使得子类具有父类相同的行为</p>
+<p>构造方法和private修饰的不能继承</p>
+<h5 id="举例-1"><a href="#举例-1" class="headerlink" title="举例"></a>举例</h5><ul>
+<li>son继承father的吃饭和说话，还可重写</li>
+<li>Android中常用的base类的书写</li>
+</ul>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><h5 id="概述-3"><a href="#概述-3" class="headerlink" title="概述"></a>概述</h5><p>同一操作作用于不同的对象，可以有不同的解释，产生不同的执行结果。也就是在编写程序时，并不能够确定引用变量所指向的具体类型和某个方法。只有当其运行期间才能够确定。 </p>
+<p>这样，不用修改程序代码，就可以让引用变量绑定到不同的类实现上，从而导致改引用调用的具体方法随之改变，让程序可以选择多个运行状态。这就是多态性</p>
+<h5 id="举个列子"><a href="#举个列子" class="headerlink" title="举个列子"></a>举个列子</h5><p>比如你去面试。桌子前，坐着3个面试官。开始面试前，你只能知道他们是该公司工作人员，并不能晓得他们具体的职位。只有当开始面试，他们开始自我介绍，或者问你问题时候，你才能知道，哦，这个问Java的是Java面试官，这个问Android的是Android面试官，这个问你理想的，是HR。。。</p>
+<p>我们可以描述如下</p>
+<p>工作人员 a= Java面试官 </p>
+<p>工作人员 b= Android面试官</p>
+<p>工作人员 c= HR</p>
+<p>这里所表现的就是多态。Java面试官等都是工作人员的子类。我们只有开始面试后，才能晓得他们具体的工种。通过工作人员一个父类就能够引用不同的子类。</p>
+<p>这里需要明白一个概念：向上转型</p>
+<p>继续面试的例子。工作人员（Work）是父类，Java面试官（Java），Android面试官（Android），HR（HR）是子类。<br>我们定义如下：</p>
+<p>Java a=new Java();</p>
+<p>这个很好理解。就是直接new了一个Java面试官的对象。</p>
+<p>Work a=new Java();这个呢？</p>
+<p>我们可以这样理解,我们定义了一个Wrok类型的a,他指向Java对象实例。由于Java是继承与Work的，所以Java自动向上转型为Work，所以a是可以指向Java实例对象的。这样我们定义的Java除了可以引用父类Work的共性外，还可以使用子类所扩展的功能。</p>
+<p>但向上转型有一些缺陷，那就是它必定会导致一些方法和属性的丢失，我们不能获取到它。所以，父类类型的引用可以调用父类总定义的所有属性和方法，对于只存在与子类中的方法和属性，就无法获取到了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">public class OOPTest &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Work a = new Java();</span><br><span class="line">        a.say();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Work &#123;</span><br><span class="line">    public void say() &#123;</span><br><span class="line">        System.out.println(&quot;我为公司工作&quot;);</span><br><span class="line">        work();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void work() &#123;</span><br><span class="line">        System.out.println(&quot;我工作，公司给我工资&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Java extends Work &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 子类重载父类方法</span><br><span class="line">     * 父类中不存在该方法，向上转型后无法调取改方法</span><br><span class="line">     * @param a</span><br><span class="line">     */</span><br><span class="line">    public void say(String a) &#123;</span><br><span class="line">        System.out.println(&quot;我为公司写Java&quot;);</span><br><span class="line">        work();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 子类重写父类方法</span><br><span class="line">     * 调取时必定是调取该方法</span><br><span class="line">     */</span><br><span class="line">    public void work() &#123;</span><br><span class="line">        System.out.println(&quot;我写Java，公司给我工资&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出：我为公司工作/我写Java，公司给我工资</p>
+<p>通过输出我们可以得知，a.say首先是运行父类Work中的say()方法，然后在运行子类Java中的work()方法。</p>
+<p>分析：在这个程序中，子类Java重载了父类的say()，重写了work();而重载后的say(String a)和父类的say()不是一个方法，向上转型后会丢失改方法。而重写了work(),指向Java的Work会调用Java中的work();</p>
+<p>总结：指向子类的父类引用，由于向上转型了，它只能访问父类中存在的方法和属性，对于不存在的，是无法调用使用的，就算是重载该方法，也不可以。若子类重写了父类中的某些方法，在调用时，必定是调用的子类重写后的该方法（动态链接，动态调用）。</p>
+<ul>
+<li><p>当超类对象引用变量 引用子类对象时，被引用对象的类型（不是引用变量的类型）决定了调用谁的成员方法。但是这个被调用的方法必须是在超类中定义过的。也就是说，被子类覆盖的方法。<strong>继承链中对象方法调用的优先级：this.show(O),super.show(O),this.show((super)0),super.show((super)O)</strong></p>
+</li>
+<li><p>成员变量，静态方法：看左边</p>
+</li>
+<li><p>非静态方法：编译看左边，运行看右边</p>
+</li>
+</ul>
+<h3 id="五大原则"><a href="#五大原则" class="headerlink" title="五大原则"></a>五大原则</h3><p>高内聚低耦合</p>
+<h4 id="单一职责（SRP）"><a href="#单一职责（SRP）" class="headerlink" title="单一职责（SRP）"></a>单一职责（SRP）</h4><p>一个类只完成它应该完成的职责，不能越俎代庖，不能成为无所不能的上帝类。</p>
+<h4 id="开放封闭原则-OCP"><a href="#开放封闭原则-OCP" class="headerlink" title="开放封闭原则(OCP)"></a>开放封闭原则(OCP)</h4><p>软件实体应当对外扩展开放，对内修改闭合。也就是说，不能再修改一个类的前提下扩展这个类。</p>
+<h4 id="里式替换原则-LSP"><a href="#里式替换原则-LSP" class="headerlink" title="里式替换原则(LSP)"></a>里式替换原则(LSP)</h4><p>子类型必须能够替换他们的基类型。也就是说，使用基类引用的地方必须能够使用继承类的对象，而不必知道它。</p>
+<h4 id="依赖倒置原则（DIP）"><a href="#依赖倒置原则（DIP）" class="headerlink" title="依赖倒置原则（DIP）"></a>依赖倒置原则（DIP）</h4><p>高层模块不应该依赖底层模块。俩者都应该依赖其抽象。（面向接口编程）</p>
+<h4 id="接口分离原则（ISP）"><a href="#接口分离原则（ISP）" class="headerlink" title="接口分离原则（ISP）"></a>接口分离原则（ISP）</h4><p>一个接口或者类应该尽可能少的行为。要明确，易理解，可复用。</p>
 
       
     </div>
@@ -425,6 +474,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/18/06Java复习-集合/" rel="prev" title="06Java复习--集合">
+                06Java复习--集合 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -503,7 +556,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -558,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三大特性"><span class="nav-number">1.2.</span> <span class="nav-text">三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#封装"><span class="nav-number">1.2.1.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">1.2.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态"><span class="nav-number">1.2.3.</span> <span class="nav-text">多态</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五大原则"><span class="nav-number">1.3.</span> <span class="nav-text">五大原则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单一职责（SRP）"><span class="nav-number">1.3.1.</span> <span class="nav-text">单一职责（SRP）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开放封闭原则-OCP"><span class="nav-number">1.3.2.</span> <span class="nav-text">开放封闭原则(OCP)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#里式替换原则-LSP"><span class="nav-number">1.3.3.</span> <span class="nav-text">里式替换原则(LSP)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖倒置原则（DIP）"><span class="nav-number">1.3.4.</span> <span class="nav-text">依赖倒置原则（DIP）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口分离原则（ISP）"><span class="nav-number">1.3.5.</span> <span class="nav-text">接口分离原则（ISP）</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三大特性"><span class="nav-number">1.2.</span> <span class="nav-text">三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#封装"><span class="nav-number">1.2.1.</span> <span class="nav-text">封装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概述-1"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#举例"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">举例</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">1.2.2.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概述-2"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#举例-1"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">举例</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态"><span class="nav-number">1.2.3.</span> <span class="nav-text">多态</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概述-3"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#举个列子"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">举个列子</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五大原则"><span class="nav-number">1.3.</span> <span class="nav-text">五大原则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单一职责（SRP）"><span class="nav-number">1.3.1.</span> <span class="nav-text">单一职责（SRP）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开放封闭原则-OCP"><span class="nav-number">1.3.2.</span> <span class="nav-text">开放封闭原则(OCP)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#里式替换原则-LSP"><span class="nav-number">1.3.3.</span> <span class="nav-text">里式替换原则(LSP)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖倒置原则（DIP）"><span class="nav-number">1.3.4.</span> <span class="nav-text">依赖倒置原则（DIP）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口分离原则（ISP）"><span class="nav-number">1.3.5.</span> <span class="nav-text">接口分离原则（ISP）</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -603,7 +656,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         
