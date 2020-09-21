@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Java基础,">
 
 
 
@@ -79,14 +79,21 @@
 
 
 
+<meta name="description" content="基本概念 在学习位运算之前先了解下机器数,真值,原码,反码,补码的概念">
+<meta name="keywords" content="Java基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java位运算">
 <meta property="og:url" content="http://yoursite.com/2020/08/06/Java位运算/index.html">
 <meta property="og:site_name" content="DreamBoat的博客">
+<meta property="og:description" content="基本概念 在学习位运算之前先了解下机器数,真值,原码,反码,补码的概念">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-06T05:54:22.907Z">
+<meta property="og:image" content="http://yoursite.com/2020/08/06/Java位运算/01-左位移运算符.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/06/Java位运算/02-右位移运算符.png">
+<meta property="og:updated_time" content="2020-08-10T08:50:46.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java位运算">
+<meta name="twitter:description" content="基本概念 在学习位运算之前先了解下机器数,真值,原码,反码,补码的概念">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/06/Java位运算/01-左位移运算符.png">
 
 
 
@@ -321,6 +328,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -348,7 +377,63 @@
       
 
       
-        
+        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p>在学习位运算之前先了解下机器数,真值,原码,反码,补码的概念</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="机器数"><a href="#机器数" class="headerlink" title="机器数"></a>机器数</h3><blockquote>
+<p>一个数在计算机中的二进制表现形式，叫做这个数的机器数<br><br>机器数是带符号的，在计算机中一个数的最高位存放符号，正数为0，负数为1<br></p>
+</blockquote>
+<p>比如，十进制中的数3，计算机字长为8位，转换为二进制就是0000 0011<br><br>十进制中的数-3,为1000 0011。</p>
+<h3 id="真值"><a href="#真值" class="headerlink" title="真值"></a>真值</h3><blockquote>
+<p>上面我们有说道，计算机中一个数的最高位是存放符号的，1000 0011，其中最高位1代表是负数，其真正数值为-3，而不是131（1000 0011，转换为十进制其实是131）,所以为了区别，带符号的机器数对应的真正数值称为机器数的真值</p>
+</blockquote>
+<p>比如0000 0011的真值=+000 0011=3;1000 0011的真值=-000 0011=-3</p>
+<h3 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h3><blockquote>
+<p>原码就是符号位加上真值的绝对值，即用第一位表示符号，其余表示值。<br><br>也就是一个数取其绝对值，转换为二进制数，首位表示符号位，就是原码<br><br>正数的原码是本身，负数的原码是其正数的原码，将符号位改为1</p>
+</blockquote>
+<p>比如：1的原码：[+1]=0000 0001；-1的原码：[-1]=1000 0001</p>
+<h3 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h3><blockquote>
+<p>正数的反码是其本身<br><br>负数的反码是其原码的基础上，符号位不变，其余取反<br><br>负数的反码一般无法直观看出，都需要先将其转换为原码再计算</p>
+</blockquote>
+<p>1的原码：[+1]=0000 0001;1的反码：[+1]=0000 0001<br><br>-1的原码：[-1]=1000 0001;-1的反码：[-1]=1111 1110</p>
+<h3 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h3><blockquote>
+<p>正数的补码是其本身<br><br>负数的补码是在其原码的基础上，符号位不变，其余取反，最后+1<br><br>也就是在反码的基础上+1</p>
+</blockquote>
+<p>1的原码：[+1]=0000 0001;1的反码：[+1]=0000 0001;1的补码：[+1]=0000 0001;<br><br>-1的原码：[-1]=1000 0001;-1的反码：[-1]=1111 1110;-1的补码：[-1]=1111 1111</p>
+<h2 id="为什么要使用原码-反码-补码"><a href="#为什么要使用原码-反码-补码" class="headerlink" title="为什么要使用原码,反码,补码"></a>为什么要使用原码,反码,补码</h2><p>通过上面我们可以知道，反码，补码都不利于人脑的直接识别，那为什么不直接用源码进行计算？<br><br>对于[-1]=1000 0001，我们知道，最高位为符号位，但计算机不知道呀，想让它知道，那会使它的基础电路设计的非常复杂。我们知道，减去一个数，就等于加一个负数，那减法也可以给它省了。<br><br>首先来看原码<br><br>计算十进制表达式：1-1=0<br><br>1-1=1+（-1）=[0000 0001]<font size="1">原</font>+[1000 0001]<font size="1">原</font>=[1000 0010]<font size="1">原</font>=-2<br><br>这显然是不正确的，所以这也是计算机内部不使用原码表示一个数的原因<br></p>
+<p>为了解决原码做减法的问题，出现了反码<br><br>1-1=1+(-1)=[0000 0001]<font size="1">原</font>+[1000 0001]]<font size="1">原</font>=[0000 0001]<font size="1">反</font>+[1111 1110]<font size="1">反</font>=[1111 1111]<font size="1">反</font>=[1000 0000]=-0<br><br>发现用反码计算减法，结果的真值部分是正确的，但“0”这个特殊的值有问题，虽说咱们知道-0和0是一样的，但计算机不知道，它会出现[0000 0000]<font size="1">原</font>,[1000 0000]<font size="1">原</font>俩个编码来表示0.<br></p>
+<p>于是补码的出现，解决了这个问题，也解决了多编码代表1个值的问题。<br><br>1-1=1+（-1）=[0000 0001]<font size="1">原</font>+[1000 0001]<font size="1">原</font>=[0000 0001]<font size="1">补</font>+[1111 1111]<font size="1">补</font>=[0000 0000]<font size="1">补</font>=[0000 0000]<font size="1">原</font><br></p>
+<blockquote>
+<p>上学学的都还给老师了，理解这个查了半天资料 -_-</p>
+</blockquote>
+<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><blockquote>
+<p>计算机中所有数据都是以补码的形式存在的<br><br>负数先转换为补码在进行运算</p>
+</blockquote>
+<h3 id="amp-：与运算"><a href="#amp-：与运算" class="headerlink" title="&amp;：与运算"></a>&amp;：与运算</h3><blockquote>
+<p>如果俩个二进制位都是1，那么运算结果是1，其余都是0</p>
+</blockquote>
+<p>例如：1+2进行&amp; 与运算<br><br>[0000 0001]<br><br>+<br><br>[0000 0010]<br><br>=<br><br>[0000 0000]=0</p>
+<h3 id="：或运算"><a href="#：或运算" class="headerlink" title="|：或运算"></a>|：或运算</h3><blockquote>
+<p>如果俩个二进制位，只要其中一个是1，那么就是1，都是0，就是0</p>
+</blockquote>
+<p>例如：1+2进行| 或运算<br><br>[0000 0001]<br><br>+<br><br>[0000 0010]<br><br>=<br><br>[0000 0011]=3</p>
+<h3 id="：非运算【取反运算】"><a href="#：非运算【取反运算】" class="headerlink" title="~：非运算【取反运算】"></a>~：非运算【取反运算】</h3><blockquote>
+<p>字面意思，取反<br><br>简单算法：取相反数-1：例如：~0=-1;~5=-6；~-5=4</p>
+</blockquote>
+<h3 id="：异或运算"><a href="#：异或运算" class="headerlink" title="^：异或运算"></a>^：异或运算</h3><blockquote>
+<p>如果俩个二进制位相同，为0，不同为1</p>
+</blockquote>
+<p>例如：1+2进行^ 或运算<br><br>[0000 0001]<br><br>+<br><br>[0000 0010]<br><br>=<br><br>[0000 0011]=3</p>
+<h3 id="位移运算符"><a href="#位移运算符" class="headerlink" title="位移运算符"></a>位移运算符</h3><h4 id="lt-lt-左位移运算符"><a href="#lt-lt-左位移运算符" class="headerlink" title="&lt;&lt;左位移运算符"></a>&lt;&lt;左位移运算符</h4><blockquote>
+<p>按二进制形式把所有数字，向左移动对应的位数，高位移除，低位补零</p>
+</blockquote>
+<p>例如：将十进制数11向左位移1位：<br><img src="/2020/08/06/Java位运算/01-左位移运算符.png" alt="图片上传错误"><br>得到22。</p>
+<h4 id="gt-gt-右位移运算符"><a href="#gt-gt-右位移运算符" class="headerlink" title="&gt;&gt;右位移运算符"></a>&gt;&gt;右位移运算符</h4><blockquote>
+<p>按二进制形式把所有数字，向右移动对应的位数，高位补零，低位移除</p>
+</blockquote>
+<p>例如：将十进制数11向右位移1位：<br><img src="/2020/08/06/Java位运算/02-右位移运算符.png" alt="图片上传错误"><br>得到5。</p>
+
       
     </div>
     
@@ -362,6 +447,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java基础/" rel="tag"># Java基础</a>
+          
+        </div>
       
 
       
@@ -381,6 +472,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/09/21/kotlin入门/" rel="prev" title="kotlin入门">
+                kotlin入门 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -432,8 +527,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -450,7 +554,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -496,6 +600,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#机器数"><span class="nav-number">1.1.</span> <span class="nav-text">机器数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#真值"><span class="nav-number">1.2.</span> <span class="nav-text">真值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原码"><span class="nav-number">1.3.</span> <span class="nav-text">原码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反码"><span class="nav-number">1.4.</span> <span class="nav-text">反码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补码"><span class="nav-number">1.5.</span> <span class="nav-text">补码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要使用原码-反码-补码"><span class="nav-number">2.</span> <span class="nav-text">为什么要使用原码,反码,补码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位运算"><span class="nav-number">3.</span> <span class="nav-text">位运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#amp-：与运算"><span class="nav-number">3.1.</span> <span class="nav-text">&amp;：与运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#：或运算"><span class="nav-number">3.2.</span> <span class="nav-text">|：或运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#：非运算【取反运算】"><span class="nav-number">3.3.</span> <span class="nav-text">~：非运算【取反运算】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#：异或运算"><span class="nav-number">3.4.</span> <span class="nav-text">^：异或运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位移运算符"><span class="nav-number">3.5.</span> <span class="nav-text">位移运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-lt-左位移运算符"><span class="nav-number">3.5.1.</span> <span class="nav-text">&lt;&lt;左位移运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gt-gt-右位移运算符"><span class="nav-number">3.5.2.</span> <span class="nav-text">&gt;&gt;右位移运算符</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -534,7 +654,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.8k字</span>
+  <span class="post-count">博客全站共18.3k字</span>
 </div>
 
         
